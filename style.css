@@ -1,0 +1,98 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;  
+    justify-content: center;    
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.component {
+    height: 60vh;
+    width: 70vw;  
+    background-color: aquamarine;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.photo {
+    height: 100%;
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+.alldata {
+    height: 100%;  /* Changed from 100vh to 100% to fit the component */
+    width: 50%;    /* Changed from 60% to 50% to fit the layout better */
+    padding-left: 20px;
+    margin: 5px;
+}
+
+.data { 
+    height: auto;  /* Changed from 55vh to auto to allow flexibility */
+    display: flex;
+    flex-flow: column;
+    justify-content: center;    
+    align-items: flex-start;
+}
+
+.prize {
+    display: flex;
+    gap: 15px;
+    padding-bottom: 30px;
+}
+
+.old-money {
+    padding-top: 15px;
+}
+
+.btn {
+    height: 40px;
+    width: 150px;
+    background-color: burlywood;
+    border: none; /* Changed from 0px solid to none */
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(168, 108, 225);
+    transform: scale(1.05);
+}
+
+@media (max-width: 620px) {
+    .component {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        justify-content: start;
+        align-items: center;
+        height: auto; /* Allow height to adjust based on content */
+        width: 90vw; /* Make it wider on smaller screens */
+    }
+
+    .photo {
+        height: 300px; /* Fixed height for images on smaller screens */
+        width: 100%; /* Full width for the image */
+    }
+
+    .alldata {
+        width: 100%; /* Full width for the text area */
+        padding: 0px 10px 15px; /* Adjust padding */
+        margin: 0px; /* Remove margin */
+    }
+
+    .data {
+        align-items: center; /* Center align text on small screens */
+        text-align: center; /* Center text */
+    }
+
+    .btn {
+        width: 100%; /* Full width for buttons */
+        max-width: 300px; /* Max width for buttons */
+        padding : 0px 5px 0px 5px;
+    }
+}
